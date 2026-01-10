@@ -21,3 +21,21 @@ return {
     update_on_load = true,
 }
 ```
+
+### Otherwise
+#### Clone plugin to waywall config folder
+```bash
+git clone https://github.com/arjuncgore/ww_temporary_ninbot ~/.config/waywall/ww_temporary_ninbot
+```
+#### Clone dependency to waywall config folder
+```bash
+git clone https://github.com/Esensats/waywall-floating ~/.config/waywall/waywall-floating
+```
+#### Setup config in `init.lua`
+```lua
+-- rest of config
+require("temporary_ninbot").setup(config, {
+        seconds_visible = 10
+    })
+return config
+```
