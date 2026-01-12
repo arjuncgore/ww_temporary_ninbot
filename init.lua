@@ -19,7 +19,9 @@ M.setup = function(config, cfg)
         if waywall.get_key("F3") then
             waywall.press_key("C")
             floating.show()
-            floating.hide_after_timeout(100 * cfg.timer_length)
+            if (cfg.timer_length ~= 0) then
+                floating.hide_after_timeout(100 * cfg.timer_length)
+            end
         else
             return false
         end

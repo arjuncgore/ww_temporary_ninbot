@@ -21,3 +21,4 @@ return {
     update_on_load = true,
 }
 ```
+Set `seconds_visible` to 0 to show Ninjabrain Bot without it hiding.
