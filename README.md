@@ -39,3 +39,5 @@ require("temporary_ninbot").setup(config, {
     })
 return config
 ```
+
+Set `seconds_visible` to 0 to show Ninjabrain Bot without it hiding.
