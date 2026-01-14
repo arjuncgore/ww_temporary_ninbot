@@ -1,7 +1,7 @@
 # Temp Ninbot Plugin
 
 Have Ninjabrain Bot show when you F3+C and hide after a set amount of time.
-Uses [Waywall-floating](https://github.com/Esensats/waywall-floating) by Esensats
+Uses my fork of [Waywall-floating](https://github.com/Esensats/waywall-floating) by Esensats
 
 ## Setup
 ### Using [plug.waywall](https://github.com/its-saanvi/plug.waywall)
@@ -14,7 +14,7 @@ return {
     })
     end,
     dependencies = {
-        url = "https://github.com/Esensats/waywall-floating",
+        url = "https://github.com/arjuncgore/waywall-floating",
         name = "waywall-floating",
     }
     name = "temporary_ninbot",
@@ -29,7 +29,7 @@ git clone https://github.com/arjuncgore/ww_temporary_ninbot ~/.config/waywall/ww
 ```
 #### Clone dependency to waywall config folder
 ```bash
-git clone https://github.com/Esensats/waywall-floating ~/.config/waywall/waywall-floating
+git clone https://github.com/arjuncgore/waywall-floating ~/.config/waywall/waywall-floating
 ```
 #### Setup config in `init.lua`
 ```lua
@@ -40,4 +40,4 @@ require("temporary_ninbot").setup(config, {
 return config
 ```
 
-Set `seconds_visible` to 0 to show Ninjabrain Bot without it hiding.
+Set `timer_length` to 0 to show Ninjabrain Bot without it hiding.

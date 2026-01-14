@@ -7,7 +7,7 @@ local M = {}
 
 -- Floating Windows
 local waywall = require("waywall")
-local create_floating = require("waywall-floating.floating")
+local create_floating = require("waywall-floating.init")
 
 local floating = create_floating({
     show_floating = waywall.show_floating,
