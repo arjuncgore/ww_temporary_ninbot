@@ -10,7 +10,7 @@ return {
     url = "https://github.com/arjuncgore/ww_temporary_ninbot",
     config = function(config),
         require("temporary_ninbot").setup(config, {
-        seconds_visible = 10
+        timer_length = 10
     })
     end,
     dependencies = {
@@ -35,7 +35,7 @@ git clone https://github.com/Esensats/waywall-floating ~/.config/waywall/waywall
 ```lua
 -- rest of config
 require("temporary_ninbot").setup(config, {
-        seconds_visible = 10
+        timer_length = 10
     })
 return config
 ```
