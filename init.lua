@@ -7,25 +7,23 @@ local M = {}
 
 -- Floating Windows
 local waywall = require("waywall")
-local create_floating = require("waywall-floating.init")
-
-local floating = create_floating({
-    show_floating = waywall.show_floating,
-    sleep = waywall.sleep,
-})
 
 M.setup = function(config, cfg)
+    local nb = 0
     config.actions["*-C"] = function()
         if waywall.get_key("F3") then
             waywall.press_key("C")
-            floating.show()
-            if cfg.timer_length ~= 0 then
-                floating.hide_after_timeout(1000 * cfg.timer_length)
+            waywall.show_floating(true)
+            nb = nb + 1
+            local nb_cur = nb
+            waywall.sleep(1000 * cfg.timer_length)
+            if nb_cur == nb and cfg.timer_length ~= 0 then
+                waywall.show_floating(false)
             end
-        else
-            return false
         end
+        return false
     end
 end
+
 
 return M
